@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="Hackeando_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Hackeando_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Hackeando_files/libs/quarto-html/popper.min.js"></script>
+<script src="Hackeando_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Hackeando_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Hackeando_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="Hackeando_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <meta name="author" content="A. Carolina Ledezma-Carrizalez Mujeres en la Ciencia y en la Tecnología Maturín 2026">
+  <title>Hackeando la Brecha: Mujeres, Ciencia Abierta y Software Libre</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="Hackeando_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Hackeando_files/libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="Hackeando_files/libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
+  <link href="Hackeando_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Hackeando_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Hackeando_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Hackeando_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="img/mujeres.png" data-background-position="right 5% center" data-background-repeat="no-repeat" data-background-size="15%" class="quarto-title-block center">
+  <h1 class="title">Hackeando la Brecha: Mujeres, Ciencia Abierta y Software Libre</h1>
+  <p class="subtitle">Del contexto global al caso de Venezuela</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+A. Carolina Ledezma-Carrizalez<br><span style="color:#99229B;">Mujeres en la Ciencia y en la Tecnología Maturín 2026</span> 
+</div>
+</div>
+</div>
+
+</section>
+<section id="por-qué-este-tema-es-urgente" class="slide level2">
+<h2>¿Por qué este tema es urgente?</h2>
+<div class="{=html}">
+<div style="position: relative; margin-top: 40px; width: 100%; height: 450px;">
+<div style="position: absolute; top: 18px; left: 5%; right: 5%; height: 4px; background: linear-gradient(90deg, #3b82f6 0%, #99229b 33%, #cf2d7d 66%, #ef4444 100%); z-index: 1; opacity: 0.6;">
+
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; position: relative; z-index: 2;">
+<div class="fragment" style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
+<div style="width: 32px; height: 32px; border-radius: 50%; background: #3b82f6; border: 4px solid #fff; margin-bottom: 20px; box-shadow: 0 0 15px rgba(59,130,246,0.4);">
+
+</div>
+<div style="background: rgba(248,249,250,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; width: 100%; min-height: 180px;">
+<span style="font-size: 1.4em; font-weight: 800; color: #3b82f6; display: block; line-height: 1;">33.3%</span> <span style="font-size: 0.7em; font-weight: bold; color: #fff; display: block; margin-top: 5px;">CIENTÍFICAS</span>
+<p style="font-size: 0.55em; margin-top: 10px; line-height: 1.4; color: #94a3b8;">
+1 de cada 3 personas en investigación global son mujeres.
+</p>
+</div>
+</div>
+<div class="fragment" style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
+<div style="width: 32px; height: 32px; border-radius: 50%; background: #99229b; border: 4px solid #fff; margin-bottom: 20px; box-shadow: 0 0 15px rgba(153,34,155,0.4);">
+
+</div>
+<div style="background: rgba(248,249,250,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; width: 100%; min-height: 180px;">
+<span style="font-size: 1.4em; font-weight: 800; color: #99229b; display: block; line-height: 1;">22%</span> <span style="font-size: 0.7em; font-weight: bold; color: #fff; display: block; margin-top: 5px;">PUESTOS STEM</span>
+<p style="font-size: 0.55em; margin-top: 10px; line-height: 1.4; color: #94a3b8;">
+Representación real en ingeniería y tecnología (G20).
+</p>
+</div>
+</div>
+<div class="fragment" style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
+<div style="width: 32px; height: 32px; border-radius: 50%; background: #cf2d7d; border: 4px solid #fff; margin-bottom: 20px; box-shadow: 0 0 15px rgba(207,45,125,0.4);">
+
+</div>
+<div style="background: rgba(248,249,250,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; width: 100%; min-height: 180px;">
+<span style="font-size: 1.4em; font-weight: 800; color: #cf2d7d; display: block; line-height: 1;">&lt; 10%</span> <span style="font-size: 0.7em; font-weight: bold; color: #fff; display: block; margin-top: 5px;">OPEN SOURCE</span>
+<p style="font-size: 0.55em; margin-top: 10px; line-height: 1.4; color: #94a3b8;">
+Participación marginal en comunidades de código abierto.
+</p>
+</div>
+</div>
+<div class="fragment" style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
+<div style="width: 32px; height: 32px; border-radius: 50%; background: #ef4444; border: 4px solid #fff; margin-bottom: 20px; box-shadow: 0 0 15px rgba(239,68,68,0.4);">
+
+</div>
+<div style="background: rgba(248,249,250,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; width: 100%; min-height: 180px;">
+<span style="font-size: 1.4em; font-weight: 800; color: #ef4444; display: block; line-height: 1;">&lt; 3%</span> <span style="font-size: 0.7em; font-weight: bold; color: #fff; display: block; margin-top: 5px;">CORE COMMITS</span>
+<p style="font-size: 0.55em; margin-top: 10px; line-height: 1.4; color: #94a3b8;">
+Presencia mínima en repositorios clave como Python.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="text-align: center; margin-top: 20px; font-size: 0.45em; color: #666;">
+<p><em>La Tubería Rota de STEM: El filtro sistémico que reduce la presencia femenina.</em></p>
+</div>
+</section>
+<section id="la-paradoja-de-la-ciencia-abierta" class="slide level2">
+<h2>La paradoja de la ciencia abierta</h2>
+<div style="margin-top: 20px; width: 100%; font-family: system-ui, -apple-system, sans-serif;">
+<p style="font-size: 0.75em; color: #64748b; margin-bottom: 25px; line-height: 1.5; text-align: left;">
+La ciencia abierta promete democratizar el conocimiento, pero ¿realmente está siendo inclusiva?
+</p>
+<div style="display: flex; gap: 20px; width: 100%; align-items: stretch; text-align: left;">
+<div class="fragment" style="flex: 1; background-color: #f0fdf4; border-left: 5px solid #16a34a; border-radius: 4px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+<h3 style="font-size: 0.7em; font-weight: 800; color: #16a34a; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 0.5px;">
+Mayor Afinidad
+</h3>
+<p style="font-size: 0.55em; color: #334155; margin: 0 0 15px 0; line-height: 1.5;">
+Las investigadoras se involucran más en prácticas de Ciencia Abierta que sus colegas hombres.
+</p>
+<div style="border-top: 1px dashed #bbf7d0; padding-top: 12px;">
+<span style="font-size: 0.5em; font-weight: bold; color: #15803d; display: block; margin-bottom: 2px;">📈 TENDENCIA POSITIVA</span>
+<p style="font-size: 0.5em; color: #475569; margin: 0; line-height: 1.4;">
+La participación femenina en la Ciencia Abierta muestra un crecimiento incremental constante.
+</p>
+</div>
+</div>
+<div class="fragment" style="flex: 1; background-color: #fff1f2; border-left: 5px solid #e11d48; border-radius: 4px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+<h3 style="font-size: 0.7em; font-weight: 800; color: #e11d48; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 0.5px;">
+Paradoja del Valor
+</h3>
+<p style="font-size: 0.55em; color: #334155; margin: 0 0 15px 0; line-height: 1.5;">
+Estas contribuciones abiertas suelen ser menos valoradas que los méritos tradicionales en las evaluaciones.
+</p>
+<div style="background: rgba(225, 29, 72, 0.05); border: 1px solid rgba(225, 29, 72, 0.2); border-radius: 6px; padding: 10px; display: flex; align-items: center; gap: 12px;">
+<span style="font-size: 1.1em; font-weight: 900; color: #e11d48; line-height: 1;">12%</span>
+<p style="font-size: 0.45em; color: #64748b; margin: 0; line-height: 1.3;">
+<strong style="color: #e11d48;">Techo de cristal STEM:</strong> Puestos directivos ocupados por mujeres (frente al 27.5% en otros sectores).
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lo-que-no-vemos-barreras-invisibles" class="slide level2">
+<h2>Lo que (no) vemos: barreras invisibles</h2>
+<div style="display: flex; gap: 12px; margin-top: 30px; width: 100%;">
+<!-- Tarjeta 1: Impostor -->
+<div class="fragment" style="flex: 1; background-color: #f8f9fa; border-top: 4px solid #99229B; padding: 15px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+<p><span style="font-size: 0.75em; font-weight: bold; display: block;">Efecto Impostor</span> <span style="font-size: 0.52em; display: block; margin-top: 6px; line-height: 1.3; color: #475569;">Muchas candidatas subestiman sus habilidades técnicas o asumen no estar calificadas para el entorno.</span></p>
+</div>
+<!-- Tarjeta 2: Entornos -->
+<div class="fragment" style="flex: 1; background-color: #f8f9fa; border-top: 4px solid #cf2d7d; padding: 15px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+<p><span style="font-size: 0.75em; font-weight: bold; display: block;">Entornos Hostiles</span> <span style="font-size: 0.52em; display: block; margin-top: 6px; line-height: 1.3; color: #475569;">Investigación documenta experiencias negativas sistemáticas de las mujeres en comunidades OSS.</span></p>
+</div>
+<!-- Tarjeta 3: Decisiones -->
+<div class="fragment" style="flex: 1; background-image: linear-gradient(135deg, #1e1b4b, #0f172a); color: white; padding: 15px; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+<span style="font-size: 0.75em; float: left;"><strong>Brecha Decisoria</strong></span> <span style="font-size: 0.9em; color: #ff47a4; float: right; font-weight: 800;"><strong>7%</strong></span>
+<div style="clear: both;">
+
+</div>
+<p><span style="font-size: 0.52em; display: block; margin-top: 6px; line-height: 1.3; color: #cbd5e1;">Las mujeres ocupan apenas el 7% de puestos de liderazgo y directivas en el Software Libre.</span></p>
+</div>
+<!-- Tarjeta 4: Referentes -->
+<div class="fragment" style="flex: 1; background-color: #f8f9fa; border-top: 4px solid #f59e0b; padding: 15px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+<p><span style="font-size: 0.75em; font-weight: bold; display: block;">Falta de Referentes</span> <span style="font-size: 0.52em; display: block; margin-top: 6px; line-height: 1.3; color: #475569;">Escasa visibilidad pública de mujeres programadoras y hackers como modelos a seguir.</span></p>
+</div>
+</div>
+<div style="text-align: center; margin-top: 35px; font-size: 0.45em; color: #666;">
+<p><em>Barreras estructurales de género en el ecosistema tecnológico y científico global.</em></p>
+</div>
+</section>
+<section id="latinoamérica-un-caso-diferente" class="slide level2">
+<h2>Latinoamérica: ¿un caso diferente?</h2>
+<div class="columns" style="display: flex; flex-direction: column; gap: 12px; margin-top: -20px;">
+<div class="rows" style="display: flex; gap: 12px;">
+<!-- Fila 1: Tarjeta 1 -->
+<div style="flex: 1; background-color: #f8f9fa; border-left: 5px solid #99229B; padding: 12px; border-radius: 4px;">
+<p><span style="font-size: 1.2em; font-weight: bold; color: #99229B; display: block; line-height: 1.1;">Menor</span> <span style="font-size: 0.75em; font-weight: bold; display: block; margin-top: 2px;">Brecha Educativa</span> <span style="font-size: 0.55em; display: block; margin-top: 4px; line-height: 1.3;">Notable avance en cerrar brechas de género en las aulas, aunque persisten disparidades en el rendimiento técnico.</span></p>
+</div>
+<!-- Fila 1: Tarjeta 2 -->
+<div style="flex: 1; background-color: #f8f9fa; border-left: 5px solid #cf2d7d; padding: 12px; border-radius: 4px;">
+<p><span style="font-size: 1.2em; font-weight: bold; color: #cf2d7d; display: block; line-height: 1.1;">+7 Horas</span> <span style="font-size: 0.75em; font-weight: bold; display: block; margin-top: 2px;">Carga de Cuidados</span> <span style="font-size: 0.55em; display: block; margin-top: 4px; line-height: 1.3;">Tiempo adicional semanal que las adolescentes dedican al trabajo doméstico y de cuidados frente a sus pares varones.</span></p>
+</div>
+</div><div class="rows" style="display: flex; gap: 12px;">
+<!-- Fila 2: Tarjeta 3 (Destacada Venezuela) -->
+<div style="flex: 1; background-image: linear-gradient(135deg, #99229B, #661166); color: white; padding: 12px; border-radius: 4px; box-shadow: 0 3px 5px rgba(0,0,0,0.1);">
+<p><span style="font-size: 1.4em; font-weight: bold; color: #fff; display: block; line-height: 1.1;">53%</span> <span style="font-size: 0.75em; font-weight: bold; display: block; margin-top: 2px;">Paridad en Venezuela</span> <span style="font-size: 0.55em; display: block; margin-top: 4px; line-height: 1.3; color: #eee;">Participación de mujeres en investigación científica, superando por 20 puntos porcentuales el promedio regional.</span></p>
+</div>
+<!-- Fila 2: Tarjeta 4 -->
+<div style="flex: 1; background-color: #f8f9fa; border-left: 5px solid #444; padding: 12px; border-radius: 4px;">
+<p><span style="font-size: 1.2em; font-weight: bold; color: #444; display: block; line-height: 1.1;">52 Años</span> <span style="font-size: 0.75em; font-weight: bold; display: block; margin-top: 2px;">Brecha en STEM</span> <span style="font-size: 0.55em; display: block; margin-top: 4px; line-height: 1.3;">Proyección para alcanzar la paridad total en la región. Actualmente, ellas ocupan solo el 12% de los puestos directivos.</span></p>
+</div>
+</div>
+</div>
+<div style="text-align: center; margin-top: 10px; font-size: 0.45em; color: #666;">
+<p><em>Fuente: Datos e investigaciones recientes / UNESCO.</em></p>
+</div>
+</section>
+<section id="qué-es-la-ciencia-abierta" class="slide level2">
+<h2>¿Qué es la Ciencia Abierta?</h2>
+<div style="margin-top: 20px; width: 100%; font-family: system-ui, -apple-system, sans-serif; text-align: left;">
+<p style="font-size: 0.7em; color: #475569; margin-bottom: 25px; line-height: 1.5;">
+Es un movimiento que transforma la producción del conocimiento, haciéndolo <strong>accesible, transparente y colaborativo</strong> para todos los niveles de la sociedad.
+</p>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; width: 100%;">
+<!-- Tarjeta 1 -->
+<div class="fragment" style="background: #f8fafc; border-top: 4px solid #3b82f6; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: left;">
+<span style="font-size: 0.65em; font-weight: bold; color: #1e293b; display: block; margin-bottom: 5px;">Datos Abiertos</span>
+<p style="font-size: 0.48em; color: #64748b; line-height: 1.4; margin: 0;">
+Disponibilidad de datos brutos para validación y reutilización global.
+</p>
+</div>
+<!-- Tarjeta 2 -->
+<div class="fragment" style="background: #f8fafc; border-top: 4px solid #99229b; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: left;">
+<span style="font-size: 0.65em; font-weight: bold; color: #1e293b; display: block; margin-bottom: 5px;">Métodos Abiertos</span>
+<p style="font-size: 0.48em; color: #64748b; line-height: 1.4; margin: 0;">
+Protocolos y metodologías compartidas para garantizar la replicabilidad.
+</p>
+</div>
+<!-- Tarjeta 3 (Destacada) -->
+<div class="fragment" style="background: #0f172a; border-top: 4px solid #00f5ff; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: left;">
+<span style="font-size: 0.65em; font-weight: bold; color: #fff; display: block; margin-bottom: 5px; letter-spacing: 0.5px;">💻 Software Libre</span>
+<p style="font-size: 0.48em; color: #94a3b8; line-height: 1.4; margin: 0;">
+Código fuente accesible y modificable: la base tecnológica de la ciencia.
+</p>
+</div>
+<!-- Tarjeta 4 -->
+<div class="fragment" style="background: #f8fafc; border-top: 4px solid #cf2d7d; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: left;">
+<span style="font-size: 0.65em; font-weight: bold; color: #1e293b; display: block; margin-bottom: 5px;">Revisión Abierta</span>
+<p style="font-size: 0.48em; color: #64748b; line-height: 1.4; margin: 0;">
+Procesos de evaluación por pares transparentes y participativos.
+</p>
+</div>
+<!-- Tarjeta 5 -->
+<div class="fragment" style="background: #f8fafc; border-top: 4px solid #f59e0b; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: left;">
+<span style="font-size: 0.65em; font-weight: bold; color: #1e293b; display: block; margin-bottom: 5px;">Ciencia Ciudadana</span>
+<p style="font-size: 0.48em; color: #64748b; line-height: 1.4; margin: 0;">
+Participación activa de la sociedad en la producción de conocimiento.
+</p>
+</div>
+<!-- Tarjeta 6 (Cierre) -->
+<div class="fragment" style="background: rgba(153, 34, 155, 0.05); border: 1px dashed #99229b; padding: 15px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+<p style="font-size: 0.5em; color: #99229b; font-weight: bold; text-align: center; margin: 0; line-height: 1.3;">
+No es solo acceso,<br>es <strong>DEMOCRATIZACIÓN</strong>
+</p>
+</div>
+</div>
+</div>
+</section>
+<section id="software-libre-libertad-no-precio" class="slide level2">
+<h2>Software Libre: libertad, no precio</h2>
+<div style="margin-top:20px;width:100%;font-family:system-ui,-apple-system,sans-serif;text-align:left;">
+<div style="display:flex;gap:20px;width:100%;align-items:stretch;margin-bottom:20px;">
+<div style="flex:1;display:flex;flex-direction:column;gap:15px;">
+<div style="background:rgba(153,34,155,0.05);border-left:5px solid #99229b;padding:15px;border-radius:4px;">
+<span style="font-size:0.6em;font-weight:800;color:#99229b;text-transform:uppercase;display:block;margin-bottom:5px;">Filosofía FSF</span>
+<p style="font-size:0.52em;color:#475569;margin:0;line-height:1.5;">
+Respeta la libertad de los usuarios y la comunidad. Es una cuestión de <strong>autonomía ética</strong>, no de costo monetario.
+</p>
+</div>
+<div style="background:#0f172a;padding:15px;border-radius:8px;color:white;">
+<p style="font-size:0.45em;font-family:'Courier New',monospace;color:#00f5ff;margin:0;font-weight:bold;">
+“Free as in speech, not as in beer”
+</p>
+<p style="font-size:0.4em;color:#94a3b8;margin:5px 0 0 0;">
+(Libre como en libertad de expresión, no como en gratuidad).
+</p>
+</div>
+<div style="margin-top:5px;">
+<span style="font-size:0.45em;font-weight:bold;color:#64748b;text-transform:uppercase;display:block;margin-bottom:8px;">Ecosistema Soberano:</span>
+<div style="display:flex;flex-wrap:wrap;gap:6px;">
+<span style="background:#f1f5f9;color:#475569;font-size:0.4em;padding:4px 8px;border-radius:4px;font-weight:bold;border:1px solid #e2e8f0;">GNU/Linux</span><span style="background:#f1f5f9;color:#475569;font-size:0.4em;padding:4px 8px;border-radius:4px;font-weight:bold;border:1px solid #e2e8f0;">Canaima</span><span style="background:#f1f5f9;color:#475569;font-size:0.4em;padding:4px 8px;border-radius:4px;font-weight:bold;border:1px solid #e2e8f0;">LibreOffice</span><span style="background:#f1f5f9;color:#475569;font-size:0.4em;padding:4px 8px;border-radius:4px;font-weight:bold;border:1px solid #e2e8f0;">Firefox</span>
+</div>
+</div>
+</div>
+<div style="flex:1.2;display:flex;flex-direction:column;gap:10px;">
+<span style="font-size:0.6em;font-weight:800;color:#1e293b;text-transform:uppercase;margin-bottom:5px;display:block;">Las 4 Libertades Esenciales:</span>
+<div class="fragment" style="display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #e2e8f0;padding:8px 15px;border-radius:8px;">
+<div style="background:#3b82f6;color:white;width:25px;height:25px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.5em;flex-shrink:0;">
+0
+</div>
+<div style="text-align:left;">
+<span style="font-size:0.5em;font-weight:800;color:#1e293b;display:block;">Ejecutar</span>
+<p style="font-size:0.42em;color:#64748b;margin:0;">
+El programa para cualquier propósito sin restricciones.
+</p>
+</div>
+</div>
+<div class="fragment" style="display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #e2e8f0;padding:8px 15px;border-radius:8px;">
+<div style="background:#99229b;color:white;width:25px;height:25px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.5em;flex-shrink:0;">
+1
+</div>
+<div style="text-align:left;">
+<span style="font-size:0.5em;font-weight:800;color:#1e293b;display:block;">Estudiar y Adaptar</span>
+<p style="font-size:0.42em;color:#64748b;margin:0;">
+Acceso al código fuente para ajustarlo a tus necesidades.
+</p>
+</div>
+</div>
+<div class="fragment" style="display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #e2e8f0;padding:8px 15px;border-radius:8px;">
+<div style="background:#cf2d7d;color:white;width:25px;height:25px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.5em;flex-shrink:0;">
+2
+</div>
+<div style="text-align:left;">
+<span style="font-size:0.5em;font-weight:800;color:#1e293b;display:block;">Redistribuir</span>
+<p style="font-size:0.42em;color:#64748b;margin:0;">
+Compartir copias libremente para ayudar a la comunidad.
+</p>
+</div>
+</div>
+<div class="fragment" style="display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #e2e8f0;padding:8px 15px;border-radius:8px;">
+<div style="background:#ef4444;color:white;width:25px;height:25px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.5em;flex-shrink:0;">
+3
+</div>
+<div style="text-align:left;">
+<span style="font-size:0.5em;font-weight:800;color:#1e293b;display:block;">Mejorar y Publicar</span>
+<p style="font-size:0.42em;color:#64748b;margin:0;">
+Contribuir con mejoras para el beneficio de todos.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment" style="width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:#fdf2f8;border:1px solid #fbcfe8;border-radius:10px;padding:15px;">
+<div style="text-align:left;padding:0 5px;">
+<span style="font-size:0.45em;font-weight:800;color:#be185d;display:block;margin-bottom:3px;">Reproducibilidad</span>
+<p style="font-size:0.38em;color:#4b5563;line-height:1.3;margin:0;">
+Código auditable para verificar resultados científicos.
+</p>
+</div>
+<div style="text-align:left;padding:0 5px;border-left:1px solid #f9a8d4;">
+<span style="font-size:0.45em;font-weight:800;color:#be185d;display:block;margin-bottom:3px;">Transparencia</span>
+<p style="font-size:0.38em;color:#4b5563;line-height:1.3;margin:0;">
+Metodologías libres de cajas negras propietarias.
+</p>
+</div>
+<div style="text-align:left;padding:0 5px;border-left:1px solid #f9a8d4;">
+<span style="font-size:0.45em;font-weight:800;color:#be185d;display:block;margin-bottom:3px;">Colaboración</span>
+<p style="font-size:0.38em;color:#4b5563;line-height:1.3;margin:0;">
+Sistemas globales sin costos de licencias privadas.
+</p>
+</div>
+<div style="text-align:left;padding:0 5px;border-left:1px solid #f9a8d4;">
+<span style="font-size:0.45em;font-weight:800;color:#be185d;display:block;margin-bottom:3px;">Soberanía</span>
+<p style="font-size:0.38em;color:#4b5563;line-height:1.3;margin:0;">
+Control total sobre las herramientas de investigación.
+</p>
+</div>
+</div>
+</div>
+</section>
+<section id="los-pilares-de-la-ciencia-abierta-según-unesco" class="slide level2">
+<h2>Los pilares de la Ciencia Abierta según UNESCO</h2>
+<div style="font-family: system-ui, -apple-system, sans-serif; text-align: left; margin-top: 15px; width: 100%;">
+<p style="font-size: 0.55em; color: #475569; margin: 0 0 15px 0;">
+La Recomendación de la UNESCO sobre Ciencia Abierta establece un marco global basado en pilares esenciales estructurales:
+</p>
+<p><span style="font-size: 0.55em; font-weight: 800; color: #1e293b; display: block; margin-bottom: 10px;"><strong>CUATRO VALORES FUNDAMENTALES:</strong></span></p>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 25px;">
+<div class="fragment" style="background: rgba(153, 34, 155, 0.04); border-left: 5px solid #99229b; padding: 12px; border-radius: 6px;">
+<span style="font-size: 0.5em; font-weight: 800; color: #99229b; display: block; margin-bottom: 3px;">Calidad e integridad</span>
+<p style="font-size: 0.42em; color: #475569; margin: 0; line-height: 1.4;">
+Garantiza una ciencia rigurosa, altamente confiable, reproducible y verificable por la comunidad global.
+</p>
+</div>
+<div class="fragment" style="background: rgba(59, 130, 246, 0.04); border-left: 5px solid #3b82f6; padding: 12px; border-radius: 6px;">
+<span style="font-size: 0.5em; font-weight: 800; color: #3b82f6; display: block; margin-bottom: 3px;">Beneficio colectivo</span>
+<p style="font-size: 0.42em; color: #475569; margin: 0; line-height: 1.4;">
+El conocimiento científico es un bien público global que pertenece y debe retornar a toda la humanidad.
+</p>
+</div>
+<div class="fragment" style="background: rgba(207, 45, 125, 0.04); border-left: 5px solid #cf2d7d; padding: 12px; border-radius: 6px;">
+<span style="font-size: 0.5em; font-weight: 800; color: #cf2d7d; display: block; margin-bottom: 3px;">Equidad y justicia</span>
+<p style="font-size: 0.42em; color: #475569; margin: 0; line-height: 1.4;">
+Asegura igual oportunidad para que investigadores y ciudadanos puedan participar, aportar y beneficiarse.
+</p>
+</div>
+<div class="fragment" style="background: rgba(6, 182, 212, 0.04); border-left: 5px solid #06b6d4; padding: 12px; border-radius: 6px;">
+<span style="font-size: 0.5em; font-weight: 800; color: #06b6d4; display: block; margin-bottom: 3px;">Diversidad e inclusión</span>
+<p style="font-size: 0.42em; color: #475569; margin: 0; line-height: 1.4;">
+Abre las puertas a múltiples formas de conocimiento, valorando especialmente saberes indígenas y locales.
+</p>
+</div>
+</div>
+<p><span style="font-size: 0.55em; font-weight: 800; color: #1e293b; display: block; margin-bottom: 12px;"><strong>SEIS PRINCIPIOS OPERATIVOS:</strong></span></p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 0.38em; font-weight: bold; line-height: 1.2;">
+<div class="fragment" style="background: #0f172a; color: #00f5ff; padding: 6px 12px; border-radius: 20px; border: 1px solid #1e293b;">
+<p>Transparencia, escrutinio, crítica y reproducibilidad</p>
+</div>
+<div class="fragment" style="background: #f1f5f9; color: #334155; padding: 6px 12px; border-radius: 20px; border: 1px solid #cbd5e1;">
+<p>Igualdad de oportunidades</p>
+</div>
+<div class="fragment" style="background: #f1f5f9; color: #334155; padding: 6px 12px; border-radius: 20px; border: 1px solid #cbd5e1;">
+<p>Responsabilidad, respeto y rendición de cuentas</p>
+</div>
+<div class="fragment" style="background: #f1f5f9; color: #334155; padding: 6px 12px; border-radius: 20px; border: 1px solid #cbd5e1;">
+<p>Colaboración, participación e inclusión</p>
+</div>
+<div class="fragment" style="background: #f1f5f9; color: #334155; padding: 6px 12px; border-radius: 20px; border: 1px solid #cbd5e1;">
+<p>Flexibilidad</p>
+</div>
+<div class="fragment" style="background: #fdf2f8; color: #be185d; padding: 6px 12px; border-radius: 20px; border: 1px solid #fbcfe8;">
+<p>Sostenibilidad</p>
+</div>
+</div>
+</div>
+</section>
+<section id="principios-fair-datos-útiles" class="slide level2">
+<h2>Principios FAIR: datos útiles</h2>
+<div style="font-family: system-ui, sans-serif; text-align: left; margin-top: 20px; width: 100%;">
+<p style="font-size: 0.6em; color: #64748b; margin-bottom: 25px;">
+Estándares globales (2016) para que la investigación sea procesable por humanos y máquinas.
+</p>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 20px;">
+<div class="fragment" style="background: #f8fafc; border-top: 4px solid #3b82f6; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+<span style="font-size: 0.7em; font-weight: 800; color: #3b82f6; display: block; margin-bottom: 5px;">F - Findable</span>
+<p style="font-size: 0.45em; color: #475569; margin: 0; line-height: 1.4;">
+<strong>Encontrables:</strong> Metadatos ricos e identificadores persistentes (DOI).
+</p>
+</div>
+<div class="fragment" style="background: #f8fafc; border-top: 4px solid #99229b; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+<span style="font-size: 0.7em; font-weight: 800; color: #99229b; display: block; margin-bottom: 5px;">A - Accessible</span>
+<p style="font-size: 0.45em; color: #475569; margin: 0; line-height: 1.4;">
+<strong>Accesibles:</strong> Protocolos de comunicación abiertos y gratuitos.
+</p>
+</div>
+<div class="fragment" style="background: #f8fafc; border-top: 4px solid #cf2d7d; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+<span style="font-size: 0.7em; font-weight: 800; color: #cf2d7d; display: block; margin-bottom: 5px;">I - Interoperable</span>
+<p style="font-size: 0.45em; color: #475569; margin: 0; line-height: 1.4;">
+<strong>Interoperables:</strong> Formatos y lenguajes estándar para intercambio de datos.
+</p>
+</div>
+<div class="fragment" style="background: #f8fafc; border-top: 4px solid #ef4444; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+<span style="font-size: 0.7em; font-weight: 800; color: #ef4444; display: block; margin-bottom: 5px;">R - Reusable</span>
+<p style="font-size: 0.45em; color: #475569; margin: 0; line-height: 1.4;">
+<strong>Reutilizables:</strong> Licencias claras y procedencia de datos bien documentada.
+</p>
+</div>
+</div>
+<div class="fragment" style="background: #0f172a; border-radius: 8px; padding: 15px; text-align: center; border: 1px solid #1e293b;">
+<p style="font-size: 0.55em; font-weight: 800; color: #00f5ff; margin: 0; letter-spacing: 0.5px;">
+“Tan abierto como sea posible, tan cerrado como sea necesario”
+</p>
+</div>
+<div class="fragment" style="margin-top: 20px; display: flex; align-items: center; gap: 15px; border-top: 1px dashed #cbd5e1; padding-top: 15px;">
+<span style="font-size: 0.45em; font-weight: 800; color: #1e293b; background: #f1f5f9; padding: 4px 8px; border-radius: 4px;">FAIR + CARE</span>
+<p style="font-size: 0.42em; color: #64748b; margin: 0; line-height: 1.3;">
+Ética y soberanía: Complemento para gestionar datos de comunidades indígenas y grupos vulnerables.
+</p>
+</div>
+</div>
+</section>
+<section id="marco-global-de-ciencia-abierta-unesco" class="slide level2" style="font-size: 1.1em;">
+<h2>Marco Global de Ciencia Abierta: UNESCO</h2>
+<h3 style="color: #00f5ff; font-size: 0.5em; font-weight: 800; text-transform: uppercase; margin-bottom: 5px;" id="hito-histórico-noviembre-2021">HITO HISTÓRICO: NOVIEMBRE 2021</h3>
+<h4 style="font-size: 0.45em; color: #475569; background: rgba(0, 245, 255, 0.05); border: 1px solid rgba(0, 245, 255, 0.2); border-radius: 12px; padding: 15px; margin-bottom: 25px; font-weight: normal; line-height: 1.4;" id="estados-miembros-adoptaron-por-unanimidad-la-recomendación-de-la-unesco-sobre-ciencia-abierta-creando-el-primer-estándar-internacional-común."><strong>193 Estados Miembros</strong> adoptaron por unanimidad la Recomendación de la UNESCO sobre Ciencia Abierta, creando el primer estándar internacional común.</h4>
+<div class="quarto-layout-panel" data-layout="[[1.1, 0.9]]" style="text-align: left; font-family: system-ui, sans-serif;">
+<div class="quarto-layout-row">
+<div id="col-izquierda" class="quarto-layout-cell" style="flex-basis: 55.0%;justify-content: flex-start;">
+<h3 style="color: #64748b; font-size: 0.45em; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;" id="los-5-pilares-estratégicos">LOS 5 PILARES ESTRATÉGICOS</h3>
+<div class="fragment" style="background: rgba(30, 41, 59, 0.05); border-left: 6px solid #3b82f6; color: #1e3a8a; padding: 10px 15px; border-radius: 8px; margin-bottom: 8px; font-size: 0.42em; font-weight: bold;">
+<p><strong>01</strong> Conocimiento científico abierto</p>
+</div>
+<div class="fragment" style="background: rgba(30, 41, 59, 0.05); border-left: 6px solid #99229b; color: #581c87; padding: 10px 15px; border-radius: 8px; margin-bottom: 8px; font-size: 0.42em; font-weight: bold;">
+<p><strong>02</strong> Infraestructuras de ciencia abierta</p>
+</div>
+<div class="fragment" style="background: rgba(30, 41, 59, 0.05); border-left: 6px solid #cf2d7d; color: #4c0519; padding: 10px 15px; border-radius: 8px; margin-bottom: 8px; font-size: 0.42em; font-weight: bold;">
+<p><strong>03</strong> Participación abierta de actores sociales</p>
+</div>
+<div class="fragment" style="background: rgba(30, 41, 59, 0.05); border-left: 6px solid #06b6d4; color: #164e63; padding: 10px 15px; border-radius: 8px; margin-bottom: 8px; font-size: 0.42em; font-weight: bold;">
+<p><strong>04</strong> Diálogo abierto con otros sistemas de conocimiento</p>
+</div>
+<div class="fragment" style="background: rgba(30, 41, 59, 0.05); border-left: 6px solid #eab308; color: #713f12; padding: 10px 15px; border-radius: 8px; font-size: 0.42em; font-weight: bold;">
+<p><strong>05</strong> Comunicación científica abierta</p>
+</div>
+</div>
+<div id="col-derecha" class="quarto-layout-cell" style="flex-basis: 45.0%;justify-content: flex-start;">
+<h3 style="color: #64748b; font-size: 0.45em; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;" id="informe-implementación-2025">INFORME IMPLEMENTACIÓN 2025</h3>
+<div class="fragment" style="background: #1e293b; border-radius: 12px; padding: 20px; border: 1px solid #e2e8f0; color: #f8fafc;">
+<h4 style="font-size: 0.38em; color: #cbd5e1; margin-bottom: 15px; font-weight: normal;" id="avance-cultural-67-países-ya-difunden-activamente-la-recomendación.">✔ <strong>Avance cultural:</strong> 67 países ya difunden activamente la Recomendación.</h4>
+<h4 style="font-size: 0.38em; color: #cbd5e1; margin-bottom: 15px; font-weight: normal;" id="desequilibrio-mucho-foco-en-publicaciones-académicas-rezago-en-inclusión-social.">⚠ <strong>Desequilibrio:</strong> Mucho foco en publicaciones académicas; rezago en inclusión social.</h4>
+<h4 style="font-size: 0.38em; color: #cbd5e1; margin: 0; font-weight: normal;" id="incentivos-faltan-méritos-institucionales-para-quienes-aplican-ciencia-abierta.">✖ <strong>Incentivos:</strong> Faltan méritos institucionales para quienes aplican ciencia abierta.</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="beneficios-de-la-ciencia-abierta" class="slide level2" style="font-size: 1.1em;">
+<h2>Beneficios de la Ciencia Abierta</h2>
+<h3 style="color: #00f5ff; font-size: 0.5em; font-weight: 800; text-transform: uppercase; margin-bottom: 25px;" id="por-qué-abrir-la-ciencia-de-los-laboratorios-a-la-sociedad">¿POR QUÉ ABRIR LA CIENCIA? DE LOS LABORATORIOS A LA SOCIEDAD</h3>
+<div class="quarto-layout-panel" data-layout="[[1, 1, 1]]" style="text-align: left; font-family: system-ui, sans-serif; gap: 15px;">
+<div class="quarto-layout-row">
+<div id="col-investigacion" class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<h3 style="color: #3b82f6; font-size: 0.45em; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;" id="para-la-investigación">PARA LA INVESTIGACIÓN</h3>
+<div class="fragment" style="background: rgba(59, 130, 246, 0.05); padding: 10px 12px; border-radius: 6px; margin-bottom: 8px;">
+<h4 style="font-size: 0.38em; color: #1e3a8a; margin: 0; font-weight: bold;" id="mayor-transparencia-y-reproducibilidad">✦ Mayor transparencia y reproducibilidad</h4>
+</div>
+<div class="fragment" style="background: rgba(59, 130, 246, 0.05); padding: 10px 12px; border-radius: 6px; margin-bottom: 8px;">
+<h4 style="font-size: 0.38em; color: #1e3a8a; margin: 0; font-weight: bold;" id="eficiencia-acelerada-en-flujos">✦ Eficiencia acelerada en flujos</h4>
+</div>
+<div class="fragment" style="background: rgba(59, 130, 246, 0.05); padding: 10px 12px; border-radius: 6px; margin-bottom: 8px;">
+<h4 style="font-size: 0.38em; color: #1e3a8a; margin: 0; font-weight: bold;" id="mayor-colaboración-global">✦ Mayor colaboración global</h4>
+</div>
+<div class="fragment" style="background: rgba(59, 130, 246, 0.05); padding: 10px 12px; border-radius: 6px;">
+<h4 style="font-size: 0.38em; color: #1e3a8a; margin: 0; font-weight: bold;" id="oportunidades-con-ia-y-big-data">✦ Oportunidades con IA y Big Data</h4>
+</div>
+</div>
+<div id="col-sociedad" class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<h3 style="color: #cf2d7d; font-size: 0.45em; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;" id="para-la-sociedad">PARA LA SOCIEDAD</h3>
+<div class="fragment" style="background: rgba(207, 45, 125, 0.05); padding: 10px 12px; border-radius: 6px; margin-bottom: 8px;">
+<h4 style="font-size: 0.38em; color: #4c0519; margin: 0; font-weight: bold;" id="democratización-del-saber">✦ Democratización del saber</h4>
+</div>
+<div class="fragment" style="background: rgba(207, 45, 125, 0.05); padding: 10px 12px; border-radius: 6px; margin-bottom: 8px;">
+<h4 style="font-size: 0.38em; color: #4c0519; margin: 0; font-weight: bold;" id="respuesta-más-rápida-a-crisis">✦ Respuesta más rápida a crisis</h4>
+</div>
+<div class="fragment" style="background: rgba(207, 45, 125, 0.05); padding: 10px 12px; border-radius: 6px; margin-bottom: 8px;">
+<h4 style="font-size: 0.38em; color: #4c0519; margin: 0; font-weight: bold;" id="cumplimiento-de-los-ods">✦ Cumplimiento de los ODS</h4>
+</div>
+<div class="fragment" style="background: rgba(207, 45, 125, 0.05); padding: 10px 12px; border-radius: 6px;">
+<h4 style="font-size: 0.38em; color: #4c0519; margin: 0; font-weight: bold;" id="fomento-del-pensamiento-crítico">✦ Fomento del pensamiento crítico</h4>
+</div>
+</div>
+<div id="col-equidad" class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<h3 style="color: #99229b; font-size: 0.45em; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;" id="equidad-de-género">EQUIDAD DE GÉNERO</h3>
+<div class="fragment" style="background: rgba(153, 34, 155, 0.05); padding: 10px 12px; border-radius: 6px; margin-bottom: 8px;">
+<h4 style="font-size: 0.38em; color: #581c87; margin: 0; font-weight: bold;" id="elimina-barreras-de-acceso">✦ Elimina barreras de acceso</h4>
+</div>
+<div class="fragment" style="background: rgba(153, 34, 155, 0.05); padding: 10px 12px; border-radius: 6px; margin-bottom: 8px;">
+<h4 style="font-size: 0.38em; color: #581c87; margin: 0; font-weight: bold;" id="reduce-la-brecha-norte-sur">✦ Reduce la brecha Norte-Sur</h4>
+</div>
+<div class="fragment" style="background: rgba(153, 34, 155, 0.05); padding: 10px 12px; border-radius: 6px; margin-bottom: 8px;">
+<h4 style="font-size: 0.38em; color: #581c87; margin: 0; font-weight: bold;" id="visibiliza-el-trabajo-de-mujeres">✦ Visibiliza el trabajo de mujeres</h4>
+</div>
+<div class="fragment" style="background: rgba(153, 34, 155, 0.05); padding: 10px 12px; border-radius: 6px;">
+<h4 style="font-size: 0.38em; color: #581c87; margin: 0; font-weight: bold;" id="fomento-de-ciencia-ciudadana">✦ Fomento de ciencia ciudadana</h4>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment" style="margin-top: 30px;">
+<h4 style="font-size: 0.42em; color: #b45309; background: #fffbeb; border: 1px solid #fef3c7; border-radius: 8px; padding: 12px; font-weight: normal; line-height: 1.4; text-align: left;" id="ojo-el-potencial-no-es-automático.-sin-políticas-deliberadas-la-ciencia-abierta-puede-reproducir-desigualdades.">⚠️ <strong>Ojo:</strong> El potencial no es automático. Sin políticas deliberadas, la ciencia abierta puede reproducir desigualdades.</h4>
+</div>
+</section>
+<section id="declaración-de-caracas-2023-voz-del-sur" class="slide level2">
+<h2>Declaración de Caracas 2023: Voz del Sur</h2>
+<div style="font-family: system-ui, sans-serif; text-align: left; margin-top: 15px; width: 100%;">
+<p style="font-size: 0.55em; color: #64748b; margin-bottom: 20px;">
+<strong>Hito de soberanía (01/feb/2023):</strong> Compromiso político de 13 países de la región para implementar la Recomendación de la UNESCO adaptada a las realidades de América Latina y el Caribe.
+</p>
+<p><span style="font-size: 0.55em; font-weight: 800; color: #1e293b; display: block; margin-bottom: 10px;"><strong>PRINCIPIOS CLAVE:</strong></span></p>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 25px;">
+<div class="fragment" style="background: rgba(59, 130, 246, 0.04); border-top: 4px solid #3b82f6; padding: 12px; border-radius: 6px;">
+<span style="font-size: 0.5em; font-weight: 800; color: #3b82f6; display: block; margin-bottom: 4px;">Derecho Humano</span>
+<p style="font-size: 0.4em; color: #475569; margin: 0; line-height: 1.4;">
+El conocimiento científico es entendido y defendido como un <strong>bien común de los pueblos</strong>.
+</p>
+</div>
+<div class="fragment" style="background: rgba(153, 34, 155, 0.04); border-top: 4px solid #99229b; padding: 12px; border-radius: 6px;">
+<span style="font-size: 0.5em; font-weight: 800; color: #99229b; display: block; margin-bottom: 4px;">Igualdad de Género</span>
+<p style="font-size: 0.4em; color: #475569; margin: 0; line-height: 1.4;">
+El acceso equitativo es <strong>imprescindible</strong> para cerrar brechas y empoderar a las mujeres en la ciencia.
+</p>
+</div>
+<div class="fragment" style="background: rgba(207, 45, 125, 0.04); border-top: 4px solid #cf2d7d; padding: 12px; border-radius: 6px;">
+<span style="font-size: 0.5em; font-weight: 800; color: #cf2d7d; display: block; margin-bottom: 4px;">Justicia Epistémica</span>
+<p style="font-size: 0.4em; color: #475569; margin: 0; line-height: 1.4;">
+Promueve una <strong>ecología de saberes</strong> mediante el diálogo abierto con conocimientos ancestrales y locales.
+</p>
+</div>
+</div>
+<p><span style="font-size: 0.55em; font-weight: 800; color: #1e293b; display: block; margin-bottom: 12px;"><strong>MAPA DE CONEXIÓN DIRECTA EN LA INVESTIGACIÓN:</strong></span></p>
+<div class="fragment" style="background: #0f172a; border-radius: 8px; padding: 15px; display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; text-align: center; gap: 10px;">
+<div style="background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; border: 1px solid rgba(207, 45, 125, 0.3);">
+<span style="font-size: 0.5em; font-weight: bold; color: #cf2d7d; display: block;">MUJERES</span>
+<p style="font-size: 0.35em; color: #94a3b8; margin: 3px 0 0 0;">
+Igualdad de género en el centro
+</p>
+</div>
+<div style="font-size: 0.6em; color: #00f5ff; font-weight: bold;">
+➔
+</div>
+<div style="background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; border: 1px solid rgba(59, 130, 246, 0.3);">
+<span style="font-size: 0.5em; font-weight: bold; color: #3b82f6; display: block;">CIENCIA ABIERTA</span>
+<p style="font-size: 0.35em; color: #94a3b8; margin: 3px 0 0 0;">
+Acceso libre al conocimiento
+</p>
+</div>
+<div style="font-size: 0.6em; color: #00f5ff; font-weight: bold;">
+➔
+</div>
+<div style="background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; border: 1px solid rgba(153, 34, 155, 0.3);">
+<span style="font-size: 0.5em; font-weight: bold; color: #99229b; display: block;">SOFTWARE LIBRE</span>
+<p style="font-size: 0.35em; color: #94a3b8; margin: 3px 0 0 0;">
+Independencia tecnológica
+</p>
+</div>
+</div>
+</div>
+</section>
+<section id="desafíos-y-oportunidades-américa-latina" class="slide level2" style="font-size: 1.1em;">
+<h2>Desafíos y Oportunidades: América Latina</h2>
+<h3 style="color: #0f172a; font-size: 0.5em; font-weight: 800; text-transform: uppercase; margin-bottom: 15px;" id="ciencia-abierta-desde-el-sur-global">CIENCIA ABIERTA DESDE EL SUR GLOBAL</h3>
+<h4 style="font-size: 0.42em; color: #0f172a !important; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; margin-bottom: 25px; font-weight: normal; line-height: 1.4; text-align: left;" id="contexto-regional-una-sólida-base-cimentada-en-iniciativas-compartidas-como-scielo-redalyc-clacso-y-diversas-políticas-nacionales-vigentes."><strong>Contexto Regional:</strong> Una sólida base cimentada en iniciativas compartidas como SciELO, Redalyc, CLACSO y diversas políticas nacionales vigentes.</h4>
+<div class="quarto-layout-panel" data-layout="[[1, 1]]" style="text-align: left; font-family: system-ui, sans-serif; gap: 20px;">
+<div class="quarto-layout-row">
+<div id="col-desafios" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<h3 style="color: #ef4444; font-size: 0.45em; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;" id="desafíos-críticos">DESAFÍOS CRÍTICOS</h3>
+<div class="fragment" style="background: rgba(239, 68, 68, 0.08); padding: 8px 12px; border-radius: 6px; margin-bottom: 8px; border-left: 4px solid #ef4444;">
+<h4 style="font-size: 0.38em; color: #0f172a !important; margin: 0; font-weight: bold;" id="brecha-digital-estructural">⚡ Brecha digital estructural</h4>
+</div>
+<div class="fragment" style="background: rgba(239, 68, 68, 0.08); padding: 8px 12px; border-radius: 6px; margin-bottom: 8px; border-left: 4px solid #ef4444;">
+<h4 style="font-size: 0.38em; color: #0f172a !important; margin: 0; font-weight: bold;" id="barreras-idiomáticas-predominio-del-inglés">⚡ Barreras idiomáticas (predominio del inglés)</h4>
+</div>
+<div class="fragment" style="background: rgba(239, 68, 68, 0.08); padding: 8px 12px; border-radius: 6px; margin-bottom: 8px; border-left: 4px solid #ef4444;">
+<h4 style="font-size: 0.38em; color: #0f172a !important; margin: 0; font-weight: bold;" id="infraestructura-limitada-8-países-sin-redes">⚡ Infraestructura limitada (8 países sin redes)</h4>
+</div>
+<div class="fragment" style="background: rgba(239, 68, 68, 0.08); padding: 8px 12px; border-radius: 6px; margin-bottom: 8px; border-left: 4px solid #ef4444;">
+<h4 style="font-size: 0.38em; color: #0f172a !important; margin: 0; font-weight: bold;" id="modelos-de-exclusión-por-pago-apc">⚡ Modelos de exclusión por pago (APC)</h4>
+</div>
+<div class="fragment" style="background: rgba(239, 68, 68, 0.08); padding: 8px 12px; border-radius: 6px; border-left: 4px solid #ef4444;">
+<h4 style="font-size: 0.38em; color: #0f172a !important; margin: 0; font-weight: bold;" id="evaluación-académica-sin-incentivos-abiertos">⚡ Evaluación académica sin incentivos abiertos</h4>
+</div>
+</div>
+<div id="col-oportunidades" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<h3 style="color: #22c55e; font-size: 0.45em; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;" id="oportunidades-únicas">OPORTUNIDADES ÚNICAS</h3>
+<div class="fragment" style="background: rgba(34, 197, 94, 0.08); padding: 11px 12px; border-radius: 6px; margin-bottom: 8px; border-left: 4px solid #22c55e;">
+<h4 style="font-size: 0.38em; color: #0f172a !important; margin: 0; font-weight: bold;" id="tradición-de-cooperación-clacso-redclara">🚀 Tradición de cooperación (CLACSO, RedCLARA)</h4>
+</div>
+<div class="fragment" style="background: rgba(34, 197, 94, 0.08); padding: 11px 12px; border-radius: 6px; margin-bottom: 8px; border-left: 4px solid #22c55e;">
+<h4 style="font-size: 0.38em; color: #0f172a !important; margin: 0; font-weight: bold;" id="trayectoria-histórica-en-acceso-abierto">🚀 Trayectoria histórica en acceso abierto</h4>
+</div>
+<div class="fragment" style="background: rgba(34, 197, 94, 0.08); padding: 11px 12px; border-radius: 6px; border-left: 4px solid #22c55e;">
+<h4 style="font-size: 0.38em; color: #0f172a !important; margin: 0; font-weight: bold;" id="alta-participación-femenina-en-investigación">🚀 Alta participación femenina en investigación</h4>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment" style="margin-top: 25px;">
+<h4 style="font-size: 0.42em; color: #0f172a !important; background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 12px; padding: 15px; font-weight: normal; line-height: 1.4; text-align: left;" id="reflexión-final-venezuela-se-perfila-como-un-laboratorio-idóneo-para-traducir-estos-principios-globales-en-políticas-locales-soberanas-con-un-enfoque-transversal-de-equidad-de-género.">💡 <strong>Reflexión final:</strong> Venezuela se perfila como un laboratorio idóneo para traducir estos principios globales en políticas locales soberanas con un enfoque transversal de equidad de género.</h4>
+</div>
+</section>
+<section id="venezuela-un-ecosistema-en-movimiento" class="slide level2" style="font-size: 1.1em;">
+<h2>Venezuela: un ecosistema en movimiento</h2>
+<h3 style="color: #00f5ff; font-size: 0.5em; font-weight: 800; text-transform: uppercase; margin-bottom: 25px;" id="políticas-públicas-y-soberanía-tecnológica">POLÍTICAS PÚBLICAS Y SOBERANÍA TECNOLÓGICA</h3>
+<div class="quarto-layout-panel" data-layout="[[1, 1]]" style="text-align: left; font-family: system-ui, sans-serif; gap: 25px;">
+<div class="quarto-layout-row">
+<div id="col-politicas" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<h3 style="color: #3b82f6; font-size: 0.45em; font-weight: 800; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px;" id="marco-normativo-y-desarrollo">MARCO NORMATIVO Y DESARROLLO</h3>
+<div class="fragment" style="background: rgba(59, 130, 246, 0.05); padding: 12px 15px; border-radius: 8px; margin-bottom: 12px; border-left: 4px solid #3b82f6;">
+<h4 style="font-size: 0.4em; color: #0f172a !important; margin: 0; font-weight: normal; line-height: 1.4;" id="decreto-presidencial-3.390-instrumento-legal-histórico-que-prioriza-el-uso-de-tecnologías-libres-y-estándares-abiertos-en-la-administración-pública-nacional."><strong>Decreto Presidencial 3.390:</strong> Instrumento legal histórico que prioriza el uso de tecnologías libres y estándares abiertos en la Administración Pública Nacional.</h4>
+</div>
+<div class="fragment" style="background: rgba(59, 130, 246, 0.05); padding: 12px 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+<h4 style="font-size: 0.4em; color: #0f172a !important; margin: 0; font-weight: normal; line-height: 1.4;" id="canaima-gnulinux-distribución-y-sistema-operativo-nacional-basado-en-software-libre-consolidando-una-trayectoria-soberana-de-18-años."><strong>Canaima GNU/Linux:</strong> Distribución y sistema operativo nacional basado en Software Libre, consolidando una trayectoria soberana de 18 años.</h4>
+</div>
+</div>
+<div id="col-indicadores" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<h3 style="color: #cf2d7d; font-size: 0.45em; font-weight: 800; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px;" id="ciencia-con-participación-femenina">CIENCIA CON PARTICIPACIÓN FEMENINA</h3>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+<div class="fragment" style="background: rgba(207, 45, 125, 0.05); padding: 10px; border-radius: 8px; border-top: 4px solid #cf2d7d; text-align: center;">
+<h4 style="font-size: 0.65em; color: #cf2d7d !important; margin: 0 0 4px 0; font-weight: 800;" id="section"><strong>53%</strong></h4>
+<h4 style="font-size: 0.35em; color: #0f172a !important; margin: 0; font-weight: normal; line-height: 1.2;" id="participación-femenina-en-investigación-científica-2025.">Participación femenina en investigación científica (2025).</h4>
+</div>
+<div class="fragment" style="background: rgba(207, 45, 125, 0.05); padding: 10px; border-radius: 8px; border-top: 4px solid #cf2d7d; text-align: center;">
+<h4 style="font-size: 0.65em; color: #cf2d7d !important; margin: 0 0 4px 0; font-weight: 800;" id="section-1"><strong>35.800</strong></h4>
+<h4 style="font-size: 0.35em; color: #0f172a !important; margin: 0; font-weight: normal; line-height: 1.2;" id="mujeres-activas-y-dedicadas-plenamente-a-la-ciencia.">Mujeres activas y dedicadas plenamente a la ciencia.</h4>
+</div>
+<div class="fragment" style="background: rgba(207, 45, 125, 0.05); padding: 10px; border-radius: 8px; border-top: 4px solid #cf2d7d; text-align: center;">
+<h4 style="font-size: 0.65em; color: #cf2d7d !important; margin: 0 0 4px 0; font-weight: 800;" id="section-2"><strong>588</strong></h4>
+<h4 style="font-size: 0.35em; color: #0f172a !important; margin: 0; font-weight: normal; line-height: 1.2;" id="proyectos-liderados-por-científicas-54-del-total-financiado.">Proyectos liderados por científicas (54% del total financiado).</h4>
+</div>
+<div class="fragment" style="background: rgba(207, 45, 125, 0.05); padding: 10px; border-radius: 8px; border-top: 4px solid #cf2d7d; text-align: center;">
+<h4 style="font-size: 0.65em; color: #cf2d7d !important; margin: 0 0 4px 0; font-weight: 800;" id="section-3"><strong>72%</strong></h4>
+<h4 style="font-size: 0.35em; color: #0f172a !important; margin: 0; font-weight: normal; line-height: 1.2;" id="de-los-proyectos-de-idi-son-ejecutados-por-mujeres.">De los proyectos de I+D+I son ejecutados por mujeres.</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>:::</p>
+</section>
+<section id="desafíos-pendientes" class="slide level2" style="font-size: 1.1em;">
+<h2>Desafíos pendientes</h2>
+<h3 style="color: #0f172a !important; font-size: 0.55em; font-weight: 800; text-transform: uppercase; margin-bottom: 25px; letter-spacing: 0.5px;" id="compromisos-y-brechas-por-resolver-en-la-región">COMPROMISOS Y BRECHAS POR RESOLVER EN LA REGIÓN</h3>
+<div class="quarto-layout-panel" data-layout="[[1, 1], [1]]" style="text-align: left; font-family: system-ui, sans-serif; gap: 20px;">
+<div class="quarto-layout-row">
+<div id="fila1-col1" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="fragment" style="background: rgba(239, 68, 68, 0.05); padding: 18px; border-radius: 12px; border-left: 5px solid #ef4444; display: grid; grid-template-columns: auto 1fr; gap: 15px; align-items: center;">
+<h4 style="font-size: 0.85em; color: #ef4444 !important; margin: 0; font-weight: 800; line-height: 1;" id="section-4"><strong>12%</strong></h4>
+<h4 style="font-size: 0.44em; color: #0f172a !important; margin: 0; font-weight: normal; line-height: 1.4;" id="liderazgo-stem-subrepresentación-crítica-de-mujeres-en-puestos-directivos-y-de-toma-de-decisiones-en-la-región."><strong>Liderazgo STEM:</strong> Subrepresentación crítica de mujeres en puestos directivos y de toma de decisiones en la región.</h4>
+</div>
+</div>
+<div id="fila1-col2" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="fragment" style="background: rgba(239, 68, 68, 0.05); padding: 18px; border-radius: 12px; border-left: 5px solid #ef4444; display: grid; grid-template-columns: auto 1fr; gap: 15px; align-items: center;">
+<h4 style="font-size: 0.85em; color: #ef4444 !important; margin: 0; font-weight: 800; line-height: 1;" id="section-5"><strong>17%</strong></h4>
+<h4 style="font-size: 0.44em; color: #0f172a !important; margin: 0; font-weight: normal; line-height: 1.4;" id="brecha-en-ia-porcentaje-alarmante-a-nivel-mundial-que-evidencia-la-falta-de-talento-femenino-en-inteligencia-artificial."><strong>Brecha en IA:</strong> Porcentaje alarmante a nivel mundial que evidencia la falta de talento femenino en Inteligencia Artificial.</h4>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div id="fila2-completa" class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+<div class="fragment" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 18px; border-radius: 10px; border-top: 4px solid #64748b;">
+<h4 style="font-size: 0.46em; color: #0f172a !important; margin: 0 0 8px 0; font-weight: bold;" id="desarrolladoras-invisibles">⚠️ <strong>Desarrolladoras invisibles</strong></h4>
+<h4 style="font-size: 0.4em; color: #475569 !important; margin: 0; font-weight: normal; line-height: 1.4;" id="en-el-entorno-de-software-libre-la-presencia-de-mujeres-no-abunda-ni-cuenta-con-suficiente-visibilidad.">En el entorno de software libre, la presencia de mujeres no abunda ni cuenta con suficiente visibilidad.</h4>
+</div>
+<div class="fragment" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 18px; border-radius: 10px; border-top: 4px solid #64748b;">
+<h4 style="font-size: 0.46em; color: #0f172a !important; margin: 0 0 8px 0; font-weight: bold;" id="evaluación-sesgada">⚠️ <strong>Evaluación sesgada</strong></h4>
+<h4 style="font-size: 0.4em; color: #475569 !important; margin: 0; font-weight: normal; line-height: 1.4;" id="es-urgente-repensar-las-políticas-nacionales-e-institucionales-hacia-criterios-y-métricas-más-equitativos.">Es urgente repensar las políticas nacionales e institucionales hacia criterios y métricas más equitativos.</h4>
+</div>
+<div class="fragment" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 18px; border-radius: 10px; border-top: 4px solid #64748b;">
+<h4 style="font-size: 0.46em; color: #0f172a !important; margin: 0 0 8px 0; font-weight: bold;" id="fricción-globallocal">⚠️ <strong>Fricción global/local</strong></h4>
+<h4 style="font-size: 0.4em; color: #475569 !important; margin: 0; font-weight: normal; line-height: 1.4;" id="tensiones-evidentes-entre-agendas-externas-como-el-plan-s-europeo-y-las-realidades-del-sur-global.">Tensiones evidentes entre agendas externas (como el Plan S europeo) y las realidades del Sur Global.</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusión-la-ciencia-abierta-como-herramienta-de-equidad" class="slide level2" style="font-size: 1.1em;">
+<h2>Conclusión: La ciencia abierta como herramienta de equidad</h2>
+<h3 style="color: #0f172a !important; font-size: 0.52em; font-weight: 800; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 0.5px;" id="hoja-de-ruta-para-una-democratización-real-y-soberana">HOJA DE RUTA PARA UNA DEMOCRATIZACIÓN REAL Y SOBERANA</h3>
+<div style="font-family: system-ui, sans-serif; text-align: left; display: flex; flex-direction: column; gap: 10px; width: 100%;">
+<div class="fragment" style="background: rgba(59, 130, 246, 0.05); padding: 10px 15px; border-radius: 8px; border-left: 5px solid #3b82f6; display: grid; grid-template-columns: 1.2fr 2fr 2fr; gap: 15px; align-items: center;">
+<h4 style="font-size: 0.42em; color: #0f172a !important; margin: 0; font-weight: bold;" id="educación-temprana"><strong>Educación temprana</strong></h4>
+<h4 style="font-size: 0.36em; color: #475569 !important; margin: 0; font-weight: normal; line-height: 1.3;" id="acción-romper-estereotipos-y-fomentar-mentorías-directas-para-niñas."><strong>Acción:</strong> Romper estereotipos y fomentar mentorías directas para niñas.</h4>
+<h4 style="font-size: 0.36em; color: #0f172a !important; margin: 0; font-weight: normal; line-height: 1.3;" id="impacto-reducir-brecha-de-expectativas-solo-14-de-niñas-en-lac-espera-trabajar-en-stem."><strong>Impacto:</strong> Reducir brecha de expectativas (solo 14% de niñas en LAC espera trabajar en STEM).</h4>
+</div>
+<div class="fragment" style="background: rgba(207, 45, 125, 0.05); padding: 10px 15px; border-radius: 8px; border-left: 5px solid #cf2d7d; display: grid; grid-template-columns: 1.2fr 2fr 2fr; gap: 15px; align-items: center;">
+<h4 style="font-size: 0.42em; color: #0f172a !important; margin: 0; font-weight: bold;" id="políticas-institucionales"><strong>Políticas institucionales</strong></h4>
+<h4 style="font-size: 0.36em; color: #475569 !important; margin: 0; font-weight: normal; line-height: 1.3;" id="acción-implementar-conciliación-familiar-efectiva-y-licencias-parentales-equitativas."><strong>Acción:</strong> Implementar conciliación familiar efectiva y licencias parentales equitativas.</h4>
+<h4 style="font-size: 0.36em; color: #0f172a !important; margin: 0; font-weight: normal; line-height: 1.3;" id="impacto-reducir-de-manera-estructural-la-carga-de-cuidados-en-las-investigadoras."><strong>Impacto:</strong> Reducir de manera estructural la carga de cuidados en las investigadoras.</h4>
+</div>
+<div class="fragment" style="background: rgba(153, 34, 155, 0.05); padding: 10px 15px; border-radius: 8px; border-left: 5px solid #99229b; display: grid; grid-template-columns: 1.2fr 2fr 2fr; gap: 15px; align-items: center;">
+<h4 style="font-size: 0.42em; color: #0f172a !important; margin: 0; font-weight: bold;" id="visibilidad-y-nexo"><strong>Visibilidad y nexo</strong></h4>
+<h4 style="font-size: 0.36em; color: #475569 !important; margin: 0; font-weight: normal; line-height: 1.3;" id="acción-fortalecer-programas-de-mentoría-a-través-de-cenditel-y-el-mincyt."><strong>Acción:</strong> Fortalecer programas de mentoría a través de Cenditel y el MINCYT.</h4>
+<h4 style="font-size: 0.36em; color: #0f172a !important; margin: 0; font-weight: normal; line-height: 1.3;" id="impacto-aumento-significativo-de-role-models-locales-y-referentes-femeninos."><strong>Impacto:</strong> Aumento significativo de <em>role models</em> locales y referentes femeninos.</h4>
+</div>
+<div class="fragment" style="background: rgba(74, 222, 128, 0.05); padding: 10px 15px; border-radius: 8px; border-left: 5px solid #22c55e; display: grid; grid-template-columns: 1.2fr 2fr 2fr; gap: 15px; align-items: center;">
+<h4 style="font-size: 0.42em; color: #0f172a !important; margin: 0; font-weight: bold;" id="comunidad-inclusiva"><strong>Comunidad inclusiva</strong></h4>
+<h4 style="font-size: 0.36em; color: #475569 !important; margin: 0; font-weight: normal; line-height: 1.3;" id="acción-impulsar-iniciativas-como-outreachy-para-pasantías-pagadas-y-remotas."><strong>Acción:</strong> Impulsar iniciativas como Outreachy para pasantías pagadas y remotas.</h4>
+<h4 style="font-size: 0.36em; color: #0f172a !important; margin: 0; font-weight: normal; line-height: 1.3;" id="impacto-incorporación-activa-de-nuevas-contribuyentes-al-software-libre-oss."><strong>Impacto:</strong> Incorporación activa de nuevas contribuyentes al Software Libre (OSS).</h4>
+</div>
+<div class="fragment" style="background: rgba(234, 179, 8, 0.05); padding: 10px 15px; border-radius: 8px; border-left: 5px solid #eab308; display: grid; grid-template-columns: 1.2fr 2fr 2fr; gap: 15px; align-items: center;">
+<h4 style="font-size: 0.42em; color: #0f172a !important; margin: 0; font-weight: bold;" id="ciencia-equitativa"><strong>Ciencia equitativa</strong></h4>
+<h4 style="font-size: 0.36em; color: #475569 !important; margin: 0; font-weight: normal; line-height: 1.3;" id="acción-reformar-la-evaluación-académica-para-valorar-prácticas-abiertas."><strong>Acción:</strong> Reformar la evaluación académica para valorar prácticas abiertas.</h4>
+<h4 style="font-size: 0.36em; color: #0f172a !important; margin: 0; font-weight: normal; line-height: 1.3;" id="impacto-consolidar-una-democratización-real-y-soberana-del-conocimiento."><strong>Impacto:</strong> Consolidar una democratización real y soberana del conocimiento.</h4>
+</div>
+</div>
+</section>
+<section id="igualdad-equidad" class="slide level2">
+<h2>Igualdad &amp; Equidad</h2>
+
+
+<img data-src="img/igualdad.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="Hackeando_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="Hackeando_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Hackeando_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Hackeando_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Hackeando_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Hackeando_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="Hackeando_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Hackeando_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Hackeando_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="Hackeando_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
